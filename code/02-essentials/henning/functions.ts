@@ -53,4 +53,18 @@ function logAndThrowError(message: string): never {
  * Functions as Values (First-Class Functions)
  */
 
+// To define a function type, you can use the following syntax:
+function peformJob(cb: () => void): void {
+  // This function takes a callback function as an argument.
+  cb(); // Call the callback function
+}
+
+// You can also specify parameters for the callback function:
+function performLog(cb: (message: string) => void): void {
+  // This function takes a callback function that accepts a string parameter.
+  cb("Done!"); // Call the callback function with a message
+}
+
+performLog(logMessage); // Pass the logMessage function as a callback
+
 export {};
